@@ -1,32 +1,64 @@
-#include<stdio.h>
+//////////////////////////////////////////////////////////////////////////
+//
+//  Include required header file
+//
+//////////////////////////////////////////////////////////////////////////
 
-void CheckEvenOdd(int iNo)
+# include<stdio.h>
+
+////////////////////////////////////////////////////////////////////////////
+//
+//  Function name : AddTowNumbers
+//  Input :         float, float
+//  Output :        float 
+//  Description :   performs addition of 2 floats
+//  Date :          08/05/20026
+//  Author :        Abhishek Balasaheb Garudkar
+//
+//////////////////////////////////////////////////////////////////////////
+
+float AddTowNumbers(
+                        float fNo1,      //First input
+                        float fNo2       //second input
+                   )
 {
-    int iRemainder =0;
-
-    iRemainder = iNo % 2;
-
-    if(iRemainder ==0)
+    float fAns = 0.0f;                   //Veriable to store result
     
-    {
-        printf("Number is Even\n");
-    }
-    else
-    {
-        printf("Number is Odd\n") ;
-    }
+    fAns = fNo1 + fNo2;                  //perfrom addition
+    
+    return fAns;
 }
 
-int main ()
-{
-    int iValue = 0;
-  
+//////////////////////////////////////////////////////////////////////////
+//
+//  Applicaton to perform addition of  2 float values
+//
+//////////////////////////////////////////////////////////////////////////
 
-    printf("Enter Number :\n");
-    scanf("%d",&iValue);
-     
-    CheckEvenOdd(iValue);
-   
+int main()
+{
+    float fValue1 = 0.0f;                  //To stoer first input
+    float fValue2 = 0.0f;                  //To store second input
+    float fResult = 0.0f;                  //To store the result
+
+    printf("Enter first number ;\n");
+    scanf("%f",&fValue1);
+
+    printf("Enter second number ;\n");
+    scanf("%f",&fValue2);
+
+    fResult = AddTowNumbers(fValue1 , fValue2);          
+
+    printf("Addition is : %f\n",fResult);
 
     return 0;
 }
+
+//////////////////////////////////////////////////////////////////////////
+//
+//  Input :  10.00   11.00
+//  Output : 21.00
+//
+//////////////////////////////////////////////////////////////////////////
+
+
