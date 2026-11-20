@@ -1,0 +1,42 @@
+//Input : my name is amit
+//output : ym eman si tima 
+import java.util.*;
+
+
+class program746
+{
+    public static void main(String[] args) 
+    {
+        Scanner sobj = new Scanner(System.in);
+
+        System.out.println("Enter String :");
+        String str = sobj.nextLine();
+
+        str =str.trim();
+
+        str = str.replaceAll("\\s+"," ");
+
+        String Tokes[]= str.split(" "); 
+
+       StringBuffer sb = null;
+
+       StringBuffer FinalStr= null;
+
+       for(int i =0 ;i < Tokes.length;i++)
+       {
+            sb= new StringBuffer(Tokes[i]);
+            sb= sb.reverse();
+           FinalStr=FinalStr.append(sb);
+
+
+           
+       }
+       System.out.println(FinalStr);
+       
+
+
+
+
+        
+    }
+}
